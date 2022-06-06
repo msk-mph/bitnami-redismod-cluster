@@ -9,7 +9,6 @@
 [Redismod](https://github.com/RedisLabsModules/redismod) is an official release from Redis Lab that includes all modules. This build is the combination of 
 those two images. 
 
-## Built
 This docker image is based on **Debian Bullseye**, it is not officially supported by Bitnami, but it works. 
 We use multi-stage builds by copying prebuild modules from official Redis module releases during the build of redis cluster.
 It includes modules:
@@ -20,6 +19,11 @@ It includes modules:
 * Redis Bloom Filter 
 
 The container will load modules during redis server starts.
+
+## Built
+```bash
+docker build -t redis-with-mod .
+```
 
 ## Usage
 ### Docker compose
